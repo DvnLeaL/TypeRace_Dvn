@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Race</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="stats">
+            <p>Time: <span id="timer">60s</span></p> <!-- Updated id to 'timer' -->
+            <p>Mistakes: <span id="mistakes">0</span></p> <!-- Updated id to 'mistakes' -->
+        </div>
+        <div id="quote" onmousedown="return false" onselectstart="return false"></div>
+
+        <textarea id="quote-input" rows="3" placeholder="Type here when the race starts..."></textarea>
+
+        <button id="start-test" onclick="startTest()">Start Test</button>
+        <button id="stop-test" onclick="displayResult()">Stop Test</button>
+
+        <div class="result">
+            <h3>Result</h3>
+            <div class="wrapper">
+                <p>Accuracy: <span id="accuracy"></span></p>
+                <p>Speed: <span id="wpm"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
